@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atom – Loan Repayment</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
+
+    * { box-sizing: border-box; }
+
+    a { text-decoration: none; }
+
+    body {
+      font-family: 'DM Sans', Arial, sans-serif;
+      background-color: #f0f0f0;
+      color: #111111;
+      margin: 0;
+      padding: 0;
+    }
+
+    .outer-td { padding: 40px 16px; }
+    .header-td { padding: 24px 32px 20px; }
+    .card-td { padding: 36px 36px 32px; }
+    .footer-td { padding: 20px 32px; }
+    .email-container { width: 600px; }
+    .hero-img { width: 600px; max-width: 100%; }
+
+    .cta-btn {
+      display: inline-block;
+      margin: 5px 0 24px;
+      padding: 10px 8px;
+      background: #0057FF;
+      font-size: 12px;
+      font-weight: 800;
+      color: white;
+      font-family: 'DM Sans', Arial, sans-serif;
+      width: 170px;
+      text-align: center;
+      height: 35px;
+      border-radius: 60px;
+      text-decoration: none;
+      letter-spacing: -0.4px;
+    }
+
+    .store-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #111111;
+      color: #ffffff;
+      width: 106px;
+      height: 34px;
+      border-radius: 44px;
+      padding: 10px 20px;
+      margin: 0 6px;
+      font-family: 'DM Sans', Arial, sans-serif;
+      text-decoration: none;
+    }
+    .store-btn-sub { font-size: 6px; line-height: 1; color: #cccccc; font-weight: 400; }
+    .store-btn-name { font-size: 8px; font-weight: 700; line-height: 1.3; color: #ffffff; width: 60px; height: 10.71px; }
+
+    .footer-link {
+      font-size: 10px;
+      color: #111111;
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      margin: 0 2px;
+    }
+
+    @media (max-width: 620px) {
+      .outer-td { padding: 20px 10px; }
+      .email-container { width: 100%; }
+      .header-td { padding: 20px 20px 16px; }
+      .card-td { padding: 28px 20px 24px; }
+      .footer-td { padding: 18px 20px; }
+      .hero-img { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  
+    <!-- LAYOUT SHELL -> not sent directly.
+   we'd copy this file per template, or merge sections into onboarding/, crypto/, stocks/, loans/.
+
+    Per template, replace only:
+      - <title>
+      - HERO: src + alt on the hero <img>
+      - BODY: content inside .card-td -->
+  
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width: 100%; background-color: #ffffff;">
+    <tr>
+      <td class="outer-td" align="center">
+
+        <table class="email-container" role="presentation" width="600" cellpadding="0" cellspacing="0" border="0">
+
+          <!-- HEADER -->
+          <tr>
+            <td class="header-td">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td style="padding-right: 10px; vertical-align: middle;">
+                    <img src="/images/atom_logo.png" alt="Atom" width="30" height="30" style="display: block; border-radius: 9999px; object-fit: cover;">
+                  </td>
+                  <td style="vertical-align: middle;">
+                    <span style="font-size: 20px; font-weight: 900; font-family: 'DM Sans', Arial, sans-serif; color: #000000;">Atom</span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- HERO: full PNG per template (text + icon + gradient baked in) -->
+          <tr>
+            <td style="padding-top: 4px;" align="center">
+              <img
+                src="/images/asset_return_hero.png"
+                alt="Email headline"
+                width="600"
+                class="hero-img"
+                style="display: block; border-radius: 12px; margin-bottom: 32px;"
+              >
+            </td>
+          </tr>
+
+          <!-- BODY -->
+          <tr>
+            <td>
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td class="card-td" style="background-color: #FAFAFC; box-shadow: 0 1px 4px rgba(0,0,0,0.06);">
+
+                    <!-- BODY START -->
+                    <p style="font-size: 12px; font-family: Arial, Helvetica, sans-serif; font-weight: 800; color: #111; margin-bottom: 20px; margin-top: 0;">Hi {{first_name}} {{last_name}},</p>
+                    <p style="font-size: 12px; color: #595957; line-height: 1.7; margin: 0;">Your collateral has been returned and is now available in your Atom crypto wallet.</p>
+
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #ffffff; border-radius: 12px; border: 1px solid #e8e8e8;">
+                      <tr>
+                        <td style="padding: 24px;">
+
+                        <!-- Receipt title -->
+                        <p style="font-size: 14px; font-weight: 800; color: #111; margin: 0 0 16px;">Receipt</p>
+
+                        <!-- Badge + Date row -->
+                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 20px;">
+                          <tr>
+                            <td style="vertical-align: middle;">
+                              <span style="display: inline-block; background-color: #EEF3FF; color: #0057FF; font-size: 10px; font-weight: 600; padding: 4px 12px; border-radius: 20px;">Atom Digital Securities</span>
+                            </td>
+                            <td align="right" style="vertical-align: middle;">
+                              <span style="font-size: 8px; color: #888888;">{{repayment_date}}</span>
+                            </td>
+                          </tr>
+                        </table>
+
+                        <!-- Receipt rows -->
+                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+
+                          <!-- Loan ID -->
+                          <tr>
+                          <td style="font-size: 10px; font-family: 'Inter', Arial, sans-serif; font-weight: 600; line-height: 14px; letter-spacing: 0px; color: #595957; padding: 12px 0; border-bottom: 1px solid #f0f0f0; width: 50%;">Loan ID</td>
+                          <td style="font-size: 10px; font-family: 'Inter', Arial, sans-serif; font-weight: 600; line-height: 14px; letter-spacing: 0px; color: #111; padding: 12px 0; border-bottom: 1px solid #f0f0f0; text-align: left;">{{loan_id}}</td>
+                        </tr>
+
+                          <!-- Original loan -->
+                          <tr>
+                            <td style="font-size: 10px; color: #595957; padding: 12px 0; border-bottom: 1px solid #f0f0f0;">Loan amount</td>
+                            <td style="font-size: 10px; font-weight: 800; color: #111; padding: 12px 0; border-bottom: 1px solid #f0f0f0; text-align: left;">{{loan_amount}}</td>
+                          </tr>
+
+                          <!-- Loan fee paid -->
+                          <tr>
+                            <td style="font-size: 10px; color: #595957; padding: 12px 0; border-bottom: 1px solid #f0f0f0;">Total repaid</td>
+                            <td style="font-size: 10px; font-weight: 800; color: #111; padding: 12px 0; border-bottom: 1px solid #f0f0f0; text-align: left;">{{total_repaid}}</td>
+                          </tr>
+
+                          <!-- Total repaid -->
+                          <tr>
+                            <td style="font-size: 10px; color: #595957; padding: 12px 0; border-bottom: 1px solid #f0f0f0;">Collateral returned</td>
+                            <td style="font-size: 10px; font-weight: 800; color: #111; padding: 12px 0; border-bottom: 1px solid #f0f0f0; text-align: left;">{{collateral_returned}}</td>
+                          </tr>
+
+                          <!-- Paid from -->
+                          <tr>
+                            <td style="font-size: 10px; color: #595957; padding: 12px 0;">Loan amount</td>
+                            <td style="font-size: 10px; font-weight: 800; color: #111; padding: 12px 0; text-align: left;">{{loan_amount}}</td>
+                          </tr>
+
+                        </table>
+
+                        <!-- Divider -->
+                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="border-top: 1px solid #f0f0f0; padding-top: 16px; padding-bottom: 4px;">
+
+                              <!-- Collateral release label + status -->
+                              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 8px;">
+                                <tr>
+                                  <td style="vertical-align: middle;">
+                                    <span style="font-size: 8px; font-weight: 700; color: #888888; letter-spacing: 1px; text-transform: uppercase;">Collateral Release</span>
+                                  </td>
+                                  <td align="right" style="vertical-align: middle;">
+                                    <span style="display: inline-flex; align-items: center; gap: 4px; background-color: #EEF3FF; color: #0057FF; font-size: 10px; font-weight: 600; padding: 4px 12px; border-radius: 20px;">
+                                      ✓ Returned to wallet
+                                    </span>
+                                  </td>
+                                </tr>
+                              </table>
+
+                              <!-- BTC amount -->
+                              <p style="font-size: 12px; font-weight: 800; color: #111; margin: 8px 0 4px;">{{btc_amount}} BTC</p>
+                              <p style="font-size: 8px; color: #888888; margin: 0;">{{btc_ngn_value}} at current price</p>
+
+                            </td>
+                          </tr>
+                        </table>
+                        
+                        <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-top: 24px;">
+                          <tr>
+                            <td>
+                              <a href="{{asset_url}}" style="display: inline-flex; align-items: center; justify-content: center; gap: 6px; background-color: #0057FF; color: #ffffff; font-size: 12px; font-weight: 800; font-family: 'DM Sans', Arial, sans-serif; width: 156px; height: 35px; border-radius: 60px; text-decoration: none; letter-spacing: -0.3px;">
+                                View your asset
+                                <img src="/images/ArrowRight.png" alt="" width="12" height="12" style="display: block;">
+                              </a>
+                            </td>
+                          </tr>
+                        </table>
+
+                        </td>
+                      </tr>
+                    </table>
+                    <!-- BODY END -->
+
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- FOOTER -->
+          <tr>
+            <td style="padding-top: 12px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td class="footer-td" style="background-color: #ffffff; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.05);">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td style="vertical-align: middle; white-space: nowrap;">
+                          <p style="font-size: 12px; color: #888888; margin: 0;">Got questions &amp; concerns ?</p>
+                        </td>
+                        <td align="center" style="vertical-align: middle; width: 100%;">
+                          <a href="mailto:support@beam.app" title="Email">
+                            <img src="/images/mail.png" alt="Email" width="24" height="24" style="display: inline-block; vertical-align: middle;">
+                          </a>
+                          <a href="https://instagram.com/beam" title="Instagram" style="margin-left: 6px;">
+                            <img src="/images/instagram.png" alt="Instagram" width="24" height="24" style="display: inline-block; vertical-align: middle;">
+                          </a>
+                          <a href="https://facebook.com/beam" title="Facebook" style="margin-left: 6px;">
+                            <img src="/images/facebook.png" alt="Facebook" width="24" height="24" style="display: inline-block; vertical-align: middle;">
+                          </a>
+                          <a href="https://x.com/beam" title="X" style="margin-left: 6px;">
+                            <img src="/images/x.png" alt="X" width="24" height="24" style="display: inline-block; vertical-align: middle;">
+                          </a>
+                        </td>
+                        <td align="right" style="vertical-align: middle; white-space: nowrap; padding-left: 10px;">
+                          <a href="#" class="footer-link">Help Center</a>
+                          <span style="color:#ccc;">|</span>
+                          <a href="#" class="footer-link">Terms</a>
+                          <span style="color:#ccc;">|</span>
+                          <a href="#" class="footer-link">Privacy</a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- APP STORE -->
+          <tr>
+            <td style="padding-top: 12px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td style="padding: 20px 32px; background-color: #FAFAFC; box-shadow: 0 1px 4px rgba(0,0,0,0.06); text-align: center; border-radius: 10px;">
+                    <p style="font-size: 10px; color: #555; margin: 0 0 12px; font-weight: 600;">Get the latest Atom App for your Mobile Phone</p>
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center">
+                      <tr>
+                        <td style="padding: 0 6px;">
+                          <a href="#" class="store-btn">
+                            <img src="/images/Appstore.png" alt="Apple" width="13.76" height="12" style="display: block;">
+                            <div>
+                              <div class="store-btn-sub">Download on the</div>
+                              <div class="store-btn-name">App Store</div>
+                            </div>
+                          </a>
+                        </td>
+                        <td style="padding: 0 2px;">
+                          <a href="#" class="store-btn">
+                            <img src="/images/Playstore.png" alt="Google Play" width="13.76" height="12" style="display: block;">
+                            <div>
+                              <div class="store-btn-sub">GET IT ON</div>
+                              <div class="store-btn-name">Google Play</div>
+                            </div>
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- UNSUBSCRIBE -->
+          <tr>
+            <td style="padding-top: 12px; padding-bottom: 4px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td style="padding: 14px 32px; background-color: #ffffff; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.05); text-align: center;">
+                    <p style="font-size: 8px; color: #888888; margin: 0;">
+                      Don't want any more emails from Beam?
+                      <a href="{{unsubscribe_url}}" style="color: #111111; font-weight: 600; text-decoration: underline; text-underline-offset: 2px;">Unsubscribe.</a>
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+        </table>
+
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
