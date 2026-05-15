@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Atom – Admin Invitation</title>
+  <title>Atom – Welcome</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
 
@@ -24,9 +24,8 @@
     .card-td { padding: 36px 36px 32px; }
     .footer-td { padding: 20px 32px; }
     .email-container { width: 600px; }
-    .banner-img { width: 600px; max-width: 100%; }
+    .hero-img { width: 600px; max-width: 100%; }
 
-    /* Button */
     .cta-btn {
       display: inline-block;
       margin: 5px 0 24px;
@@ -44,7 +43,6 @@
       letter-spacing: -0.4px;
     }
 
-    /* App store buttons */
     .store-btn {
       display: inline-flex;
       align-items: center;
@@ -62,7 +60,6 @@
     .store-btn-sub { font-size: 6px; line-height: 1; color: #cccccc; font-weight: 400; }
     .store-btn-name { font-size: 8px; font-weight: 700; line-height: 1.3; color: #ffffff; width: 60px; height: 10.71px; }
 
-    /* Footer links */
     .footer-link {
       font-size: 10px;
       color: #111111;
@@ -78,7 +75,7 @@
       .header-td { padding: 20px 20px 16px; }
       .card-td { padding: 28px 20px 24px; }
       .footer-td { padding: 18px 20px; }
-      .banner-img { width: 100%; }
+      .hero-img { width: 100%; }
     }
   </style>
 </head>
@@ -96,7 +93,7 @@
               <table role="presentation" cellpadding="0" cellspacing="0" border="0">
                 <tr>
                   <td style="padding-right: 10px; vertical-align: middle;">
-                    <img src="icons/atom_logo.png" alt="Atom" width="30" height="30" style="display: block; border-radius: 9999px; object-fit: cover;">
+                    <img src="../images/atom_logo.png" alt="Atom" width="30" height="30" style="display: block; border-radius: 9999px; object-fit: cover;">
                   </td>
                   <td style="vertical-align: middle;">
                     <span style="font-size: 20px; font-weight: 900; font-family: 'DM Sans', Arial, sans-serif; color: #000000;">Atom</span>
@@ -106,14 +103,20 @@
             </td>
           </tr>
 
-          <!-- BANNER -->
+          <!-- HERO -->
           <tr>
             <td style="padding-top: 4px;" align="center">
-              <img src="welcome_banner.png" alt="Promo Banner" width="550" class="banner-img" style="display: block; border-radius: 12px; margin-bottom: 32px;">
+              <img
+                src="../images/welcome_banner.png"
+                alt="Welcome to Atom"
+                width="600"
+                class="hero-img"
+                style="display: block; border-radius: 12px; margin-bottom: 32px;"
+              >
             </td>
           </tr>
 
-          <!-- BODY CARD -->
+          <!-- BODY -->
           <tr>
             <td>
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
@@ -123,64 +126,78 @@
                     <p style="font-size: 12px; font-family: Arial, Helvetica, sans-serif; font-weight: 800; color: #111; margin-bottom: 20px; margin-top: 0;">Hi {{first_name}} {{last_name}},</p>
 
                     <p style="font-size: 12px; color: #595957; line-height: 1.7; margin-bottom: 20px; margin-top: 0;">
-                        Your account is ready! Just one step left to trade crypto, stocks, and access loans.
+                      Your account is ready! Just one step left to trade crypto, stocks, and access loans.
                     </p>
 
                     <p style="font-size: 12px; color: #595957; line-height: 1.7; margin-bottom: 20px; margin-top: 0;">Here is what you need to do next:</p>
 
-                  <!-- Step 1 -->
-                      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 20px;">
-                        <tr>
-                          <td style="width: 44px; vertical-align: top; padding-top: 2px;">
-                            <div style="width:38px;height:38px;border-radius:50%;background:#FFFFFF;border:1px solid #D6E2FF;display:inline-flex;align-items:center;justify-content:center;">
-                              <img src="icons/kyc.png" alt="KYC" width="18" height="18" style="display: block;">
-                            </div>
-                          </td>
-                          <td style="padding-left: 12px; vertical-align: top;">
-                            <p style="font-size: 13px; font-weight: 700; color: #111; margin: 0 0 4px;">Complete your KYC verification</p>
-                            <p style="font-size: 11px; color: #888; line-height: 1.6; margin: 0;">Verify your BVN, NIN, ID document, and complete a quick liveness check. Takes less than 5 minutes</p>
-                          </td>
-                        </tr>
-                      </table>
+                    <!-- Step 1 -->
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 20px;">
+                      <tr>
+                        <td style="width: 44px; vertical-align: top; padding-top: 2px;">
+                          <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                              <td align="center" valign="middle" style="width:40px;height:40px;border-radius:50%;background:#ffffff;border:1px solid #E6EAF2;">
+                                <img src="../images/UserFocus.png" alt="" width="18" height="18" style="display:block;border:0;">
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td style="padding-left: 12px; vertical-align: top;">
+                          <p style="font-size: 13px; font-weight: 700; color: #111; margin: 0 0 4px;">Complete your KYC verification</p>
+                          <p style="font-size: 11px; color: #888; line-height: 1.6; margin: 0;">Verify your BVN, NIN, ID document, and complete a quick liveness check. Takes less than 5 minutes</p>
+                        </td>
+                      </tr>
+                    </table>
 
-                      <!-- Step 2 -->
-                      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 20px;">
-                        <tr>
-                          <td style="width: 44px; vertical-align: top; padding-top: 2px;">
-                            <div style="width:38px;height:38px;border-radius:50%;background:#FFFFFF;border:1px solid #D6E2FF;display:inline-flex;align-items:center;justify-content:center;">
-                              <img src="icons/wallet.png" alt="Wallet" width="18" height="18" style="display: block;">
-                            </div>
-                          </td>
-                          <td style="padding-left: 12px; vertical-align: top;">
-                            <p style="font-size: 13px; font-weight: 700; color: #111; margin: 0 0 4px;">Fund your wallet</p>
-                            <p style="font-size: 11px; color: #888; line-height: 1.6; margin: 0;">Verify your BVN, NIN, ID document, and complete a quick liveness check. Takes less than 5 minutes</p>
-                          </td>
-                        </tr>
-                      </table>
+                    <!-- Step 2 -->
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 20px;">
+                      <tr>
+                        <td style="width: 44px; vertical-align: top; padding-top: 2px;">
+                          <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                              <td align="center" valign="middle" style="width:40px;height:40px;border-radius:50%;background:#ffffff;border:1px solid #E6EAF2;">
+                                <img src="../images/Wallet%20copy.png" alt="" width="18" height="18" style="display:block;border:0;">
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td style="padding-left: 12px; vertical-align: top;">
+                          <p style="font-size: 13px; font-weight: 700; color: #111; margin: 0 0 4px;">Fund your wallet</p>
+                          <p style="font-size: 11px; color: #888; line-height: 1.6; margin: 0;">Verify your BVN, NIN, ID document, and complete a quick liveness check. Takes less than 5 minutes</p>
+                        </td>
+                      </tr>
+                    </table>
 
-                      <!-- Step 3 -->
-                      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 28px;">
-                        <tr>
-                          <td style="width: 44px; vertical-align: top; padding-top: 2px;">
-                            <div style="width:38px;height:38px;border-radius:50%;background:#FFFFFF;border:1px solid #D6E2FF;display:inline-flex;align-items:center;justify-content:center;">
-                                <img src="icons/tv.png" alt="Trade" width="18" height="18" style="display: block;">
-                            </div>
-                          </td>
-                          <td style="padding-left: 12px; vertical-align: top;">
-                            <p style="font-size: 13px; font-weight: 700; color: #111; margin: 0 0 4px;">Start trading</p>
-                            <p style="font-size: 11px; color: #888; line-height: 1.6; margin: 0;">Verify your BVN, NIN, ID document, and complete a quick liveness check. Takes less than 5 minutes.</p>
-                      </table>
+                    <!-- Step 3 -->
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 28px;">
+                      <tr>
+                        <td style="width: 44px; vertical-align: top; padding-top: 2px;">
+                          <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                              <td align="center" valign="middle" style="width:40px;height:40px;border-radius:50%;background:#ffffff;border:1px solid #E6EAF2;">
+                                <img src="../images/PresentationChart.png" alt="" width="18" height="18" style="display:block;border:0;">
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td style="padding-left: 12px; vertical-align: top;">
+                          <p style="font-size: 13px; font-weight: 700; color: #111; margin: 0 0 4px;">Start trading</p>
+                          <p style="font-size: 11px; color: #888; line-height: 1.6; margin: 0;">Verify your BVN, NIN, ID document, and complete a quick liveness check. Takes less than 5 minutes.</p>
+                        </td>
+                      </tr>
+                    </table>
 
-                      <table role="presentation" cellpadding="0" cellspacing="0" border="0">
-                        <tr>
-                          <td>
-                            <a href="{{kyc_url}}" class="cta-btn" style="display:inline-flex;align-items:center;gap:4px;">
-                              Complete your KYC Now
-                              <img src="icons/ArrowRight.png" alt="Arrow Right" width="12" height="12" style="display: block;">
-                            </a>
-                          </td>
-                        </tr>
-                      </table>
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td>
+                          <a href="{{kyc_url}}" class="cta-btn" style="display:inline-flex;align-items:center;gap:4px;">
+                            Complete your KYC Now
+                            <img src="../images/ArrowRight.png" alt="" width="12" height="12" style="display: block;">
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
 
                   </td>
                 </tr>
@@ -196,28 +213,23 @@
                   <td class="footer-td" style="background-color: #ffffff; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.05);">
                     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                       <tr>
-                        <!-- LEFT: Got questions -->
                         <td style="vertical-align: middle; white-space: nowrap;">
                           <p style="font-size: 12px; color: #888888; margin: 0;">Got questions &amp; concerns ?</p>
                         </td>
-
-                        <!-- CENTER: Social icons -->
                         <td align="center" style="vertical-align: middle; width: 100%;">
                           <a href="mailto:support@beam.app" title="Email">
-                            <img src="icons/mail.png" alt="Email" width="24" height="24" style="display: inline-block; vertical-align: middle;">
+                            <img src="../images/mail.png" alt="Email" width="24" height="24" style="display:inline-block;vertical-align:middle;border:0;">
                           </a>
-                          <a href="https://instagram.com/beam" title="Instagram" style="margin-left: 6px;">
-                            <img src="icons/instagram.png" alt="Instagram" width="24" height="24" style="display: inline-block; vertical-align: middle;">
+                          <a href="https://instagram.com/beam" title="Instagram" style="margin-left:6px;">
+                            <img src="../images/instagram.png" alt="Instagram" width="24" height="24" style="display:inline-block;vertical-align:middle;border:0;">
                           </a>
-                          <a href="https://facebook.com/beam" title="Facebook" style="margin-left: 6px;">
-                            <img src="icons/facebook.png" alt="Facebook" width="24" height="24" style="display: inline-block; vertical-align: middle;">
+                          <a href="https://facebook.com/beam" title="Facebook" style="margin-left:6px;">
+                            <img src="../images/facebook.png" alt="Facebook" width="24" height="24" style="display:inline-block;vertical-align:middle;border:0;">
                           </a>
-                          <a href="https://x.com/beam" title="X" style="margin-left: 6px;">
-                            <img src="icons/x.png" alt="X" width="24" height="24" style="display: inline-block; vertical-align: middle;">
+                          <a href="https://x.com/beam" title="X" style="margin-left:6px;">
+                            <img src="../images/X.png" alt="X" width="24" height="24" style="display:inline-block;vertical-align:middle;border:0;">
                           </a>
                         </td>
-
-                        <!-- RIGHT: Footer links -->
                         <td align="right" style="vertical-align: middle; white-space: nowrap; padding-left: 10px;">
                           <a href="#" class="footer-link">Help Center</a>
                           <span style="color:#ccc;">|</span>
@@ -243,21 +255,13 @@
                     <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center">
                       <tr>
                         <td style="padding: 0 6px;">
-                          <a href="#" class="store-btn">
-                            <img src="icons/apple.png" alt="Apple" width="13.76" height="12" style="display: block;">
-                            <div>
-                              <div class="store-btn-sub">Download on the</div>
-                              <div class="store-btn-name">App Store</div>
-                            </div>
+                          <a href="#" style="display:inline-block;">
+                            <img src="../images/Appstore.png" alt="Download on the App Store" width="106" height="34" style="display:block;border:0;">
                           </a>
                         </td>
                         <td style="padding: 0 2px;">
-                          <a href="#" class="store-btn">
-                            <img src="icons/google-play.png" alt="Google Play" width="13.76" height="12" style="display: block;">
-                            <div>
-                              <div class="store-btn-sub">GET IT ON</div>
-                              <div class="store-btn-name">Google Play</div>
-                            </div>
+                          <a href="#" style="display:inline-block;">
+                            <img src="../images/Playstore.png" alt="Get it on Google Play" width="106" height="34" style="display:block;border:0;">
                           </a>
                         </td>
                       </tr>
