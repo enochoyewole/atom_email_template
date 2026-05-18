@@ -19,12 +19,21 @@
       padding: 0;
     }
 
-    .outer-td { padding: 40px 16px; }
-    .header-td { padding: 24px 32px 20px; }
+    .outer-td { padding: 40px 32px; }
+    .header-td { padding: 24px 32px 20px; border-bottom: 1px solid #F0F0F0; }
     .card-td { padding: 36px 36px 32px; }
     .footer-td { padding: 20px 32px; }
-    .email-container { width: 600px; }
+    .email-container { width: 600px; background-color: #ffffff; }
     .hero-img { width: 600px; max-width: 100%; }
+
+    .body-p {
+      line-height: 18px;
+      margin: 0 0 14.63px 0;
+    }
+    .body-p-sm {
+      line-height: 18px;
+      margin: 0;
+    }
 
     .cta-btn {
       display: inline-block;
@@ -70,12 +79,21 @@
     }
 
     @media (max-width: 620px) {
-      .outer-td { padding: 20px 10px; }
+      .outer-td { padding: 20px 24px; }
       .email-container { width: 100%; }
       .header-td { padding: 20px 20px 16px; }
       .card-td { padding: 28px 20px 24px; }
       .footer-td { padding: 18px 20px; }
       .hero-img { width: 100%; }
+      .footer-col {
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+        padding: 5px 0 !important;
+      }
+      .footer-links-col {
+        padding-left: 0 !important;
+      }
     }
   </style>
 </head>
@@ -91,15 +109,18 @@
       - BODY: content inside .card-td -->
   
 
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width: 100%; background-color: #ffffff;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width: 100%; background-color: #FAFAFC;">
     <tr>
       <td class="outer-td" align="center">
 
-        <table class="email-container" role="presentation" width="600" cellpadding="0" cellspacing="0" border="0">
+        <table class="email-container" role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="background-color: #ffffff;">
+          <tr>
+            <td class="email-shell" style="padding-left: 32px; padding-right: 32px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
 
           <!-- HEADER -->
           <tr>
-            <td class="header-td">
+            <td class="header-td" style="border-bottom: 1px solid #F0F0F0;">
               <table role="presentation" cellpadding="0" cellspacing="0" border="0">
                 <tr>
                   <td style="padding-right: 10px; vertical-align: middle;">
@@ -113,15 +134,19 @@
             </td>
           </tr>
 
+          <tr>
+            <td style="height: 20px; line-height: 20px; font-size: 0; padding: 0; mso-line-height-rule: exactly;">&nbsp;</td>
+          </tr>
+
           <!-- HERO: full PNG per template (text + icon + gradient baked in) -->
           <tr>
-            <td style="padding-top: 4px;" align="center">
+            <td style="padding-top: 0;" align="center">
               <img
                 src="heroes/PLACEHOLDER.png"
                 alt="Email headline"
-                width="600"
+                width="536"
                 class="hero-img"
-                style="display: block; border-radius: 12px; margin-bottom: 32px;"
+                style="display: block; border-radius: 12px; margin-bottom: 16px;"
               >
             </td>
           </tr>
@@ -135,7 +160,7 @@
 
                     <!-- BODY START -->
                     <p style="font-size: 12px; font-family: Arial, Helvetica, sans-serif; font-weight: 800; color: #111; margin-bottom: 20px; margin-top: 0;">Hi {{first_name}} {{last_name}},</p>
-                    <p style="font-size: 12px; color: #595957; line-height: 1.7; margin: 0;">Replace this block with template-specific body content.</p>
+                    <p class="body-p" style="font-size: 12px; color: #595957; line-height: 18px; margin: 0 0 14.63px 0;">Replace this block with template-specific body content.</p>
                     <!-- BODY END -->
 
                   </td>
@@ -149,13 +174,13 @@
             <td style="padding-top: 12px;">
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                 <tr>
-                  <td class="footer-td" style="background-color: #ffffff; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.05);">
+                  <td class="footer-td" style="background-color: #FAFAFC; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.05);">
                     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                       <tr>
-                        <td style="vertical-align: middle; white-space: nowrap;">
+                        <td style="vertical-align: middle; white-space: nowrap;" class="footer-col">
                           <p style="font-size: 12px; color: #888888; margin: 0;">Got questions &amp; concerns ?</p>
                         </td>
-                        <td align="center" style="vertical-align: middle; width: 100%;">
+                        <td class="footer-col" align="center" style="vertical-align: middle; width: 100%;">
                           <a href="mailto:support@beam.app" title="Email">
                             <img src="images/mail.png" alt="Email" width="24" height="24" style="display: inline-block; vertical-align: middle;">
                           </a>
@@ -169,7 +194,7 @@
                             <img src="images/x.png" alt="X" width="24" height="24" style="display: inline-block; vertical-align: middle;">
                           </a>
                         </td>
-                        <td align="right" style="vertical-align: middle; white-space: nowrap; padding-left: 10px;">
+                        <td align="right" style="vertical-align: middle; white-space: nowrap; padding-left: 10px;" class="footer-col footer-links-col">
                           <a href="#" class="footer-link">Help Center</a>
                           <span style="color:#ccc;">|</span>
                           <a href="#" class="footer-link">Terms</a>
@@ -221,20 +246,17 @@
 
           <!-- UNSUBSCRIBE -->
           <tr>
-            <td style="padding-top: 12px; padding-bottom: 4px;">
-              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
-                <tr>
-                  <td style="padding: 14px 32px; background-color: #ffffff; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.05); text-align: center;">
-                    <p style="font-size: 8px; color: #888888; margin: 0;">
-                      Don't want any more emails from Beam?
-                      <a href="{{unsubscribe_url}}" style="color: #111111; font-weight: 600; text-decoration: underline; text-underline-offset: 2px;">Unsubscribe.</a>
-                    </p>
-                  </td>
-                </tr>
-              </table>
+            <td style="padding-top: 24px; padding-bottom: 24px; text-align: center;">
+              <p style="font-size: 8px; color: #888888; margin: 0;">
+                Don't want any more emails from Atom?
+                <a href="{{unsubscribe_url}}" style="color: #111111; font-weight: 600; text-decoration: none;">Unsubscribe.</a>
+              </p>
             </td>
           </tr>
 
+              </table>
+            </td>
+          </tr>
         </table>
 
       </td>
